@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="570dp"
+    android:background="@drawable/background_search_bar"
+    >
+
+    <ImageView
+        android:id="@+id/more_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/icon_more_vert_grey"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/rubik_light"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        android:transitionName="image_transition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/rubik_light"
+        android:text="Products of the category"
+        android:textColor="@color/colorGrey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/information"
+        android:layout_width="340dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_category">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_products"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/add_category_cardview"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp"
+            android:visibility="visible"
+            android:background="@drawable/background_add_produtct"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/name_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/rubik"
+                android:text="Add"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_category_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/rubik_light"
+                android:text="Abacate"
+                android:textAlignment="textStart"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_product" />
+
+
+            <TextView
+                android:id="@+id/number_items_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="@font/rubik_light"
+                android:textAlignment="textEnd"
+                android:textSize="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/add_category"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/colorGreyLight"
+                android:textSize="27dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/remove_category"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="–"
+                android:textColor="@color/colorGreyLight"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/add_new_product_cardview"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/background_add_produtct"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/rubik"
+                android:text="Add"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorGreyDark"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/rubik_light"
+                android:text="New Product"
+                android:textAlignment="textEnd"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/button_add_new_product"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/colorGreyLight"
+                android:textSize="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_category_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/icon_edit_grey"
+        app:backgroundTint="@color/colorToolbar"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/button_add_to_cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_add_to_cart"
+        app:maxImageSize="20dp"
+        app:tint="@color/colorWhite" />
+-->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_add_to_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Add to cart"
+        android:textColor="@color/colorWhite"
+        app:backgroundTint="@color/colorToolbar"
+        app:icon="@drawable/icon_add_shopping"
+        app:iconTint="@color/colorWhite"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/information"
+        app:maxImageSize="20dp"
+        app:tint="@color/colorWhite" />
+
+    <!--
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="47dp"
+            android:drawableRight="@drawable/icon_add_shopping"
+            android:outlineAmbientShadowColor="@color/colorToolbar"
+            android:text="Add to cart"
+            android:textColor="@color/colorToolbar"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/information" />
+            -->
+
+    <TextView
+        android:id="@+id/textView_items"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/rubik"
+        android:text="Items"
+        android:textSize="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_to_cart"
+        app:layout_constraintEnd_toEndOf="@+id/button_add_to_cart"
+        app:layout_constraintTop_toBottomOf="@+id/information" />
+
+    <TextView
+        android:id="@+id/total_itens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/rubik"
+        android:textAlignment="textEnd"
+        android:textSize="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_items"
+        app:layout_constraintEnd_toStartOf="@+id/textView_items"
+        app:layout_constraintTop_toTopOf="@+id/textView_items" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

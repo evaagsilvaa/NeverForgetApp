@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorToolbar"
+    >
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_light"
+        android:text="Category"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:transitionName="example_transition"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="280dp"
+        android:layout_height="300dp"
+        android:background="@drawable/backgrounddialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textfield_name_category_create_category"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/TextInputLayoutAppearance"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:hint="Name"
+            android:textColorHint="@color/colorWhite"
+            app:boxStrokeErrorColor="@color/colorWhite"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/colorWhite"
+            app:errorEnabled="true"
+            app:errorIconTint="@color/colorWhite"
+            app:errorTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorTextColor="@color/colorWhite"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxStrokeColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/create_category_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                app:boxStrokeErrorColor="@color/colorGrey"
+                app:errorTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:errorEnabled="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textColorLink="@color/colorWhite"
+                android:textColorHighlight="@color/colorWhite"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textfield_category_father_category_create_category"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:hint="Main Category"
+            android:textColorHint="@color/colorWhite"
+            android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/colorWhite"
+            app:boxStrokeErrorColor="@color/colorWhite"
+            app:endIconTint="@color/colorWhite"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textfield_name_category_create_category"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textview.MaterialAutoCompleteTextView
+                android:id="@+id/create_category_father"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textColorLink="@color/colorWhite"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/button_create_category"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/colorWhite"
+            android:clickable="true"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:text="Create Product"
+            android:tint="@color/colorWhite"
+            app:borderWidth="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/textfield_category_father_category_create_category"
+            app:layout_constraintStart_toStartOf="@+id/textfield_category_father_category_create_category"
+            app:layout_constraintTop_toBottomOf="@+id/textfield_category_father_category_create_category"
+            app:rippleColor="@color/colorGreyDark"
+            app:strokeColor="@color/colorWhite"
+            app:strokeWidth="4dp" />
+
+        <TextView
+            android:id="@+id/errorname_create_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toStartOf="@+id/textfield_name_category_create_category"
+            app:layout_constraintTop_toBottomOf="@+id/textfield_name_category_create_category" />
+
+        <TextView
+            android:id="@+id/errorcategoryfather_create_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toStartOf="@+id/textfield_category_father_category_create_category"
+            app:layout_constraintTop_toBottomOf="@+id/textfield_category_father_category_create_category" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

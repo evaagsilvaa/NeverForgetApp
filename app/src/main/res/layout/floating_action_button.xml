@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/colorGreyLight"
+            android:src="@drawable/icon_add_white"
+            android:tint="@color/colorWhite"
+            app:backgroundTint="@color/colorGreyLight"
+            app:fabSize="normal"
+            app:rippleColor="@color/colorGreyDark" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorGreyLight"
+        android:clickable="true"
+        android:src="@drawable/icon_category"
+        android:tint="@color/colorWhite"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorGreyLight"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorGreyDark" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorGreyLight"
+        android:clickable="true"
+        android:src="@drawable/icon_add_shopping"
+        android:tint="@color/colorWhite"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorGreyLight"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorGreyDark" />
+
+    <TextView
+        android:id="@+id/fab_category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fab_text_bg"
+        android:fontFamily="@font/rubik_light"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Add category"
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_category"
+        app:layout_constraintEnd_toStartOf="@+id/fab_category"
+        app:layout_constraintTop_toTopOf="@+id/fab_category" />
+
+    <TextView
+        android:id="@+id/fab_product_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fab_text_bg"
+        android:fontFamily="@font/rubik_light"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Add product"
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_product"
+        app:layout_constraintEnd_toStartOf="@+id/fab_product"
+        app:layout_constraintTop_toTopOf="@+id/fab_product" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorGreyLight"
+        android:clickable="true"
+        android:src="@drawable/icon_list"
+        android:tint="@color/colorWhite"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorGreyLight"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_product"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorGreyDark" />
+
+    <TextView
+        android:id="@+id/fab_list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/fab_text_bg"
+        android:fontFamily="@font/rubik_light"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Change list"
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_list"
+        app:layout_constraintEnd_toStartOf="@+id/fab_product"
+        app:layout_constraintTop_toTopOf="@+id/fab_list" />
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="500dp"
+    android:minWidth="350dp"
+    android:minHeight="450dp"
+    app:layout_constraintCircleRadius="100dp"
+    android:background="@color/colorToolbar"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="280dp"
+        android:layout_height="400dp"
+        android:background="@drawable/backgrounddialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_fragment_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/rubik_light"
+            android:text="New List"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="30dp"
+            android:transitionName="example_transition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_new_list_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="60dp"
+            android:hint="Name"
+            android:textColorHint="@color/colorWhite"
+            android:theme="@style/TextInputLayoutAppearance"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/colorWhite"
+            app:boxStrokeErrorColor="@color/colorWhite"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/colorWhite"
+            app:errorEnabled="true"
+            app:errorIconTint="@color/colorWhite"
+            app:errorTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorTextColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_fragment_list"
+            tools:ignore="MissingConstraints">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/create_list_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textColorLink="@color/colorWhite"
+                app:boxStrokeErrorColor="@color/colorWhite"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/button_create_list"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/colorWhite"
+            android:clickable="true"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:text="Create List"
+            android:tint="@color/colorWhite"
+            app:borderWidth="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_new_list_layout"
+            app:rippleColor="@color/colorGreyDark"
+            app:strokeColor="@color/colorWhite"
+            app:strokeWidth="4dp" />
+
+        <TextView
+            android:id="@+id/errorname_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/name_new_list_layout"
+            app:layout_constraintTop_toBottomOf="@+id/name_new_list_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

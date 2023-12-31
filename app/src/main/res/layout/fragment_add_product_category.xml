@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDialogContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/dialog_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_add_product_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:fontFamily="@font/rubik"
+            android:textColor="@color/colorToolbar"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Choose a Shopping List to add this product"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textMessageQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/rubik"
+            android:textSize="16sp"
+            android:text="Quantity to add:"
+            app:layout_constraintBottom_toBottomOf="@+id/remove_item_add_product_category"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/add_item_add_product_category" />
+
+        <TextView
+            android:id="@+id/number_add_items_add_product_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/rubik"
+            android:textAlignment="textEnd"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/remove_item_add_product_category"
+            app:layout_constraintEnd_toStartOf="@+id/add_item_add_product_category"
+            app:layout_constraintTop_toTopOf="@+id/add_item_add_product_category" />
+
+        <TextView
+            android:id="@+id/add_item_add_product_category"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/colorGreyLight"
+            android:textSize="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/remove_item_add_product_category"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="–"
+            android:textColor="@color/colorGreyLight"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_item_add_product_category" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/rubik"
+            android:text="Shopping List to add:"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMessageQuantity" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_list_change_list_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="240dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:hint="Name"
+            android:textColorHint="@color/colorToolbar"
+            android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/colorToolbar"
+            app:boxStrokeErrorColor="@color/colorToolbar"
+            app:endIconTint="@color/colorToolbar"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorTextColor="@color/colorToolbar"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textview.MaterialAutoCompleteTextView
+                android:id="@+id/exposed_dropdown_name_list_add_product_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/colorToolbar"
+                android:textColorHighlight="@color/colorToolbar"
+                android:textColorHint="@color/colorToolbar"
+                android:textColorLink="@color/colorToolbar" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/errorshoppinglist_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorToolbar"
+            android:text="Enter Shopping List"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/name_list_change_list_layout"
+            app:layout_constraintTop_toBottomOf="@+id/name_list_change_list_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_cancel_add_product_category"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:text="Cancel"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutDialog" />
+
+    <Button
+        android:id="@+id/button_add_to_list_add_product_category"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutDialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/change_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/rubik_light"
+        android:text="Change Shopping List"
+        android:textColor="@color/colorWhite"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_list_change_list_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="240dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="80dp"
+        android:hint="Name"
+        android:textColorHint="@color/colorWhite"
+        android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@color/colorWhite"
+        app:endIconTint="@color/colorWhite"
+        app:boxStrokeErrorColor="@color/colorWhite"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/colorWhite"
+        app:errorTextAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_list"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textview.MaterialAutoCompleteTextView
+            android:id="@+id/exposed_dropdown_name_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="false"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textColorLink="@color/colorWhite" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/errorname_change_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/name_list_change_list_layout"
+        app:layout_constraintTop_toBottomOf="@+id/name_list_change_list_layout" />
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/rubik_light"
+        android:text="Number of items:"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/name_list_change_list_layout"
+        app:layout_constraintTop_toBottomOf="@+id/name_list_change_list_layout" />
+
+    <TextView
+        android:id="@+id/n_of_items_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/rubik_light"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_change_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="Change list"
+        app:backgroundTint="@color/colorWhite"
+        app:fabSize="normal"
+        app:layout_constraintEnd_toEndOf="@+id/name_list_change_list_layout"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:maxImageSize="20dp"
+        app:tint="@color/colorWhite" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_list_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/icon_add_toolbarcolor"
+        app:backgroundTint="@color/colorWhite"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/button_change_list"
+        app:layout_constraintEnd_toStartOf="@+id/button_change_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_change_list"
+        app:maxImageSize="20dp"
+        app:tint="@color/colorToolbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:src="@drawable/icon_add_toolbarcolor"
+        android:tint="@color/colorWhite"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorGreyLight"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_edit_list"
+        app:layout_constraintEnd_toEndOf="@+id/fab_list_options"
+        app:layout_constraintStart_toStartOf="@+id/fab_list_options"
+        app:rippleColor="@color/colorGreyDark" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_delete_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:src="@drawable/icon_delete_toolbarcolor"
+        android:tint="@color/colorWhite"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorWhite"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_list_options"
+        app:layout_constraintEnd_toEndOf="@+id/fab_list_options"
+        app:layout_constraintStart_toStartOf="@+id/fab_list_options"
+        app:rippleColor="@color/colorGreyDark" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_edit_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:src="@drawable/icon_edit_toolbarcolor"
+        android:tint="@color/colorWhite"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorWhite"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_delete_list"
+        app:layout_constraintEnd_toEndOf="@+id/fab_list_options"
+        app:layout_constraintStart_toStartOf="@+id/fab_list_options"
+        app:rippleColor="@color/colorGreyDark" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
